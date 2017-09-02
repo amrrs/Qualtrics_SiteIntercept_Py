@@ -8,9 +8,15 @@ Sample Python code to extract Survey Impressions from Qualtrics API
 * Update Qualtrics User ID and its token in the code
 * Execute/Run the code to get your tabular results printed 
 
-**Caveats:** 
-* Please make sure the Qualtrics ID and token used in the code has access to SiteIntercept Data 
-* This code is compatible with Python version 2.x.x  
+**Requirements:**
+* Python version 2.x.x  
+* Modules:
+  * requests
+  * pandas
+  * json
+  * datetime
+* Survey SiteIntercept IDs
+* Quatlrics ID and token with API access enabled (and access to respective Survey SiteIntercept IDs)
 
 ## Future Development:
 
