@@ -29,15 +29,11 @@ end = datetime.strftime(end,'%Y-%m-%d')
 def extract_impressions(mySurvey):
    
     url = "https://survey.qualtrics.com//WRAPI/SiteIntercept/api.php?Request=getInterceptStats&Version=2.0&User="+myID+"&Token="+myToken+"&Format=JSON&InterceptID="+mySurvey+"&StartDate="+start+"&EndDate="+end+"&DataType=Impressions&Interval=Day"
-    r = requests.get(url) 
-   
+    r = requests.get(url)
     p = json.loads(r.text)
-   
     pss = pandas.DataFrame((p['Result']['Data']).items(),columns=['Date','Impressions'])
     return(pss['Impressions'].sum())
     
-
-
 print(start,end)
 result = {}
 for mySurvey in survey_list:
